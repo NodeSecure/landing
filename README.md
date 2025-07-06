@@ -1,5 +1,5 @@
 # landing
-A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com/) and built with vite.
+A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com/) and built with Vite.
 
 ## 💃 Getting Started
 
