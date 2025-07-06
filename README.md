@@ -1,5 +1,15 @@
 # landing
-A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com/). Just open `index.html` and you're all set!
+A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com/) and built with vite.
+
+## 💃 Getting Started
+
+```
+$ git clone https://github.com/NodeSecure/landing.git
+$ cd landing
+
+$ npm ci
+$ npm run dev
+```
 
 ## 💡 Why choosing Pages ?
 It's quite simple to maintain and costs nothing, which is convenient since we don't have much funding to invest in it.
