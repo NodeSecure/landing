@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com/). Just open `index.html` and you're all set!",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,12 +16,15 @@
   "keywords": [],
   "author": "GENTILHOMME Thomas <gentilhomme.thomas@gmail.com>",
   "license": "MIT",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/NodeSecure/landing/issues"
   },
   "homepage": "https://github.com/NodeSecure/landing#readme",
   "devDependencies": {
+    "@openally/config.eslint": "^2.2.0",
     "vite": "^7.0.2"
+  },
+  "dependencies": {
+    "zup": "^0.0.2"
   }
 }
