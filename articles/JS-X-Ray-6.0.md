@@ -1,6 +1,7 @@
 ---
 title: JS-X-Ray 6.0
-author: Thomas.G
+description: Discover what’s new in JS-X-Ray 6.0! Explore the latest features of this open source JavaScript security analyzer and see how it helps you write safer, cleaner code.
+author: fraxken
 date: 16/01/2023
 ---
 

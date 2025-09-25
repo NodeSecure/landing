@@ -10,15 +10,15 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./public/css/reset.css" />
-  <link rel="stylesheet" href="./public/css/index.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/index.css" />
   <title>NodeSecure - Securing the Node.js Ecosystem</title>
 </head>
 
 <body>
   <canvas id="network-bg"></canvas>
 
-  <header>
+  <header class="header">
     <div class="header-background"></div>
     <div class="header-content centered-content">
       <img src="https://avatars.githubusercontent.com/u/85318671?s=200&v=4" alt="NodeSecure Logo"
@@ -40,6 +40,10 @@
           <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord"
             style="width:28px;height:28px;filter:invert(1) brightness(2);">
           <span>Join Discord</span>
+        </a>
+        <a href="../blog/index.html" title="Visit our blog" class="view-on-discord">
+          <img width="64" height="64" src="https://img.icons8.com/external-itim2101-fill-itim2101/64/external-writer-blogger-and-influencer-itim2101-fill-itim2101.png"  style="width:28px;height:28px;filter:invert(1) brightness(2);" alt="Blog"/>
+          <span>Visit Blog</span>
         </a>
       </div>
     </div>
@@ -81,7 +85,7 @@
     <div class="centered-content">
       <p>🐤 New to <b>NodeSecure</b>? Check out our beginner guides to start contributing.</p>
       <div class="cta-buttons">
-        <a href="https://github.com/NodeSecure/Governance/blob/main/guides/contributor-en.md" target="_blank" class="button primary" style="font-size: 1.1rem; padding: 0.8rem 1.5rem;">
+        <a href="https://github.com/NodeSecure/Governance/blob/main/guides/contributor-en.md" class="button primary" style="font-size: 1.1rem; padding: 0.8rem 1.5rem;">
           <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 8px;">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
           </svg>
@@ -133,7 +137,7 @@
         <div class="project-card skew">
           <div class="project-content">
             <div class="project-title">
-              <img src="./public/images/vulnera.png" alt="Vulnera" class="logo">
+              <img src="./images/vulnera.png" alt="Vulnera" class="logo">
               <h3>Vulnera</h3>
             </div>
             <p>Programmatically fetch security vulnerabilities with one or many strategies (NPM Audit, Sonatype, Snyk, OSV...).</p>

@@ -134,3 +134,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore all files in /blog except base templates
+/blog/*
+!/blog/*base-template.html*

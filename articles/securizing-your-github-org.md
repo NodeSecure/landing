@@ -1,6 +1,7 @@
 ---
 title: Securizing your GitHub org
-author: Thomas.G
+description: Learn hands-on strategies and real-world tips to boost the security of your GitHub organization. Perfect for open source maintainers and anyone serious about code safety!
+author: fraxken
 date: 19/02/2023
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: NodeSecure Vuln-era
-author: Thomas.G
+description: Dive into the rebranding of Vulnera, NodeSecure’s powerful tool for uncovering Node.js vulnerabilities from multiple sources. Discover its evolution and how it’s shaping the future of open source security!
+author: fraxken
 date: 21/07/2022
 ---
 

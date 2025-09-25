@@ -28,6 +28,10 @@ body {
   height: auto;
 }
 
+a {
+  color: var(--primary-theme-color);
+}
+
 #network-bg {
   position: fixed;
   top: 0;
@@ -81,6 +85,23 @@ header {
   border-bottom: 1px solid #a4f4fc74;
   box-shadow: 4px 4px 20px #1a0a928d;
   margin-bottom: 2rem;
+}
+
+.blogHeader {
+  margin-bottom: 0;
+}
+
+.articleHeader { 
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.articleHeader > a {
+  align-self: center;
+  font-size: 30px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -528,6 +549,10 @@ header>.header-content>.description b {
   text-align: left;
 }
 
+.project-content h1 {
+  font-size: 2rem;
+}
+
 .project-content .logo {
   height: 28px;
   width: auto;
@@ -585,3 +610,11 @@ header>.header-content>.description b {
   color: #fff;
   letter-spacing: 0.01em;
 }
+
+
+
+
+
+
+
+

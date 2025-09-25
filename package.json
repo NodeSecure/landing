@@ -1,13 +1,14 @@
 {
   "name": "landing_git",
   "version": "1.0.0",
-  "description": "A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com/). Just open `index.html` and you're all set!",
+  "description": "NodeSecure Landing Page",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run build:articles && vite build",
+    "preview": "vite preview",
+    "build:articles": "node src/build-articles.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "vite": "^7.0.2"
   },
   "dependencies": {
+    "dompurify": "^3.2.7",
+    "jsdom": "^27.0.0",
+    "marked": "^16.3.0",
     "zup": "^0.0.2"
   }
 }

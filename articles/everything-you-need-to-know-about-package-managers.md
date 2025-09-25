@@ -1,6 +1,7 @@
 ---
 title: Everything you need to know: package managers
-author: Antoine.C
+description: Curious about package managers? Explore their essential role in modern software, from Linux to npm, and learn why they’re the backbone of every developer’s workflow!
+author: antoine-coulon
 date: 18/10/2022
 ---
 
