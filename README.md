@@ -7,7 +7,7 @@ A simple HTML/CSS landing page hosted on [GitHub Pages](https://pages.github.com
 $ git clone https://github.com/NodeSecure/landing.git
 $ cd landing
 
-$ npm ci
+$ npm install
 $ npm run dev
 ```
 
