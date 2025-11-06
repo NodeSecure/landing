@@ -22,9 +22,9 @@
   "homepage": "https://github.com/NodeSecure/landing#readme",
   "devDependencies": {
     "@openally/config.eslint": "^2.2.0",
-    "vite": "^7.0.2"
+    "vite": "7.2.1"
   },
   "dependencies": {
-    "zup": "^0.0.2"
+    "zup": "0.0.2"
   }
 }
