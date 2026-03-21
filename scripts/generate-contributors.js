@@ -26,11 +26,16 @@ const repositories = [
 ];
 
 async function getRepositoryContributors(repository) {
+  const headers = {};
+  // GITHUB_TOKEN is not necessary to make request to /contributors
+  // but the rate limits for calls without auth is very low.
+  if (process.env.GITHUB_TOKEN) {
+    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  }
+
   const response = await fetch(
     `https://api.github.com/repos/NodeSecure/${repository}/contributors`, {
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
-      }
+      headers
     });
 
   return response.json();
