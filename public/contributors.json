@@ -41,7 +41,7 @@
     "type": "core",
     "user_view_type": "public",
     "site_admin": false,
-    "contributions": 90
+    "contributions": 91
   },
   {
     "login": "clemgbld",
@@ -104,7 +104,7 @@
     "repos_url": "https://api.github.com/users/fabnguess/repos",
     "events_url": "https://api.github.com/users/fabnguess/events{/privacy}",
     "received_events_url": "https://api.github.com/users/fabnguess/received_events",
-    "type": "core",
+    "type": "contributor",
     "user_view_type": "public",
     "site_admin": false,
     "contributions": 8

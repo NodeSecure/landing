@@ -16,16 +16,6 @@ async function generateContributors() {
 
   await writeFile(filepath, payload);
 }
-const coreContributors = [
-  "fraxken",
-  "PierreDemailly",
-  "tony-go",
-  "antoine-coulon",
-  "Kawacrepe",
-  "im-codebreaker",
-  "clemgbld",
-  "fabnguess"
-];
 
 const bots = [
   "dependabot[bot]",
@@ -68,6 +58,14 @@ async function getRepositoryContributors(repository) {
   return response.json();
 }
 
+async function getCoreContributors() {
+  const responseCore = await fetch("https://raw.githubusercontent.com/NodeSecure/Governance/main/contributors.json");
+  const responseCoreContributors = await responseCore.json();
+  const coreContributors = responseCoreContributors.core.map((contributor) => contributor.github);
+
+  return coreContributors;
+}
+
 async function getContributors() {
   const allContributors = await Promise.all(
     repositories.map((repository) => getRepositoryContributors(repository))
@@ -75,19 +73,21 @@ async function getContributors() {
   const contributors = allContributors.flat();
 
   const uniqueContributors = new Map();
+
+  const coreContributors = await getCoreContributors();
+
   for (const contributor of contributors) {
-    if (bots.includes(contributor.login)) {
+    if (bots.includes(contributor.login) || uniqueContributors.has(contributor.login)) {
       continue;
     }
-    if (!uniqueContributors.get(contributor.login)) {
-      if (coreContributors.includes(contributor.login)) {
-        contributor.type = "core";
-      }
-      else {
-        contributor.type = "contributor";
-      }
-      uniqueContributors.set(contributor.login, contributor);
+
+    if (coreContributors.includes(contributor.login)) {
+      contributor.type = "core";
     }
+    else {
+      contributor.type = "contributor";
+    }
+    uniqueContributors.set(contributor.login, contributor);
   }
 
   return Array.from(uniqueContributors.values());
