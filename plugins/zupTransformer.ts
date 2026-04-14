@@ -5,9 +5,21 @@ import path from "node:path";
 // Import Third-party Dependencies
 import compile from "zup";
 
+interface ZupTransformerOptions {
+  [key: string]: any;
+}
+
+interface TransformResult {
+  code: string;
+  map: null;
+}
+
 export default function zupTransformer(
-  data = {}
-) {
+  data: ZupTransformerOptions = {}
+): {
+  name: string;
+  transform: (src: string, id: string) => TransformResult | undefined;
+} {
   return {
     name: "zup-transformer",
 
@@ -15,7 +27,7 @@ export default function zupTransformer(
      * @param {!string} src
      * @param {!string} id
      */
-    transform(src, id) {
+    transform(src: string, id: string): TransformResult | undefined {
       if (
         path.extname(id) === ".html" &&
         path.basename(id) === "index.html"
