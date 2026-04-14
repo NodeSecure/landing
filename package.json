@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "contributors": "node scripts/generate-contributors.js",
+    "contributors": "node scripts/generate-contributors.ts",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src scripts plugins"
+    "lint": "eslint \"**/*.{js,mjs}\""
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/NodeSecure/landing#readme",
   "devDependencies": {
     "@openally/config.eslint": "2.4.2",
+    "@types/node": "25.6.0",
     "vite": "8.0.5"
   },
   "dependencies": {

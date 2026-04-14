@@ -1,14 +1,29 @@
-(function particulesIIFE() {
+interface Point {
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+  color: string;
+}
+
+function particulesIIFE(): void {
   const palette = ["#00D1FF", "#3722AF", "#5A44DA"];
-  const canvas = document.getElementById("network-bg");
-  const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("network-bg") as HTMLCanvasElement;
+  const ctx = canvas.getContext("2d")!;
+  
+  if (!ctx) {
+    console.error("Unable to get 2D context");
+    return;
+  }
+
   let width = window.innerWidth;
   let height = window.innerHeight;
   canvas.width = width;
   canvas.height = height;
 
-  const points = [];
+  const points: Point[] = [];
   const numPoints = Math.floor((width * height) / 9000);
+  
   for (let i = 0; i < numPoints; i++) {
     points.push({
       x: Math.random() * width,
@@ -19,8 +34,9 @@
     });
   }
 
-  function draw() {
+  function draw(): void {
     ctx.clearRect(0, 0, width, height);
+    
     // Draw lines
     for (let i = 0; i < points.length; i++) {
       for (let j = i + 1; j < points.length; j++) {
@@ -36,6 +52,7 @@
         }
       }
     }
+    
     // Draw points
     for (const p of points) {
       ctx.globalAlpha = 0.38;
@@ -47,7 +64,7 @@
     ctx.globalAlpha = 1;
   }
 
-  function animate() {
+  function animate(): void {
     for (const p of points) {
       p.x += p.dx;
       p.y += p.dy;
@@ -62,13 +79,15 @@
     requestAnimationFrame(animate);
   }
 
-  function resize() {
+  function resize(): void {
     width = window.innerWidth;
     height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
   }
+  
   window.addEventListener("resize", resize);
-
   animate();
-}());
+}
+
+particulesIIFE();
