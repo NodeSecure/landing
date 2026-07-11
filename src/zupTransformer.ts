@@ -1,21 +1,17 @@
-/* eslint-disable consistent-return */
 // Import Node.js Dependencies
 import path from "node:path";
 
 // Import Third-party Dependencies
 import compile from "zup";
+import type { TransformResult } from "vite";
 
 export default function zupTransformer(
-  data = {}
+  data: Record<string, any> = {}
 ) {
   return {
     name: "zup-transformer",
 
-    /**
-     * @param {!string} src
-     * @param {!string} id
-     */
-    transform(src, id) {
+    transform(src: string, id: string): TransformResult | undefined {
       if (
         path.extname(id) === ".html" &&
         path.basename(id) === "index.html"
@@ -25,6 +21,8 @@ export default function zupTransformer(
           map: null
         };
       }
+
+      return void 0;
     }
   };
 }

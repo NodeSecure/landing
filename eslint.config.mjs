@@ -1,14 +1,11 @@
 // Import Third-party Dependencies
-import { ESLintConfig, globals } from "@openally/config.eslint";
+import { typescriptConfig, globals } from "@openally/config.eslint";
 
-export default [
-  ...ESLintConfig,
-  {
-    languageOptions: {
-      sourceType: "module",
-      globals: {
-        ...globals.browser
-      }
+export default typescriptConfig({
+  languageOptions: {
+    sourceType: "module",
+    globals: {
+      ...globals.browser
     }
   }
-];
+});
